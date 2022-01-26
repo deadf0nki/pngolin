@@ -42,7 +42,7 @@ public class Pngolin {
         }
     }
 
-    public static String Encode(String file) {
+    public static String Decode(String file) {
         try {
             String filePath = file;
 
