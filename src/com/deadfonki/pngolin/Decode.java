@@ -29,7 +29,7 @@ public final class Decode {
 
         }
         String fin = new String(ba);
-
+        fin = fin.replaceAll("[^\\x20-\\x7e]","");
         return fin;
     }
 
@@ -43,7 +43,6 @@ public final class Decode {
                 byte g = (byte) c.getGreen(); //split into green
                 byte b = (byte) c.getBlue(); //split into blue
                 byte[] RGB = {r, g, b};
-
                 for (int i = 0; i < 3; i++) {
                     if ((RGB[i] & 1) == 1) { //LSB is a 1
                         sb.append("1");

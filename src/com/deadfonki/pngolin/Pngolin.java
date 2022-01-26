@@ -12,6 +12,7 @@ import java.util.Scanner;
 import javax.imageio.ImageIO;
 
 public class Pngolin {
+
     public static void Encode(String input, String outputDir, String output, String content) {
         try {
             String filename = input;
@@ -52,7 +53,7 @@ public class Pngolin {
             image = ImageIO.read(outFile);
 
             String bitMessage = Decode.decodeMessage(image);
-            return bitMessage;
+            return Decode.getMessage(bitMessage);
         } catch (IOException e) {
             System.out.println("File not found; " + e.getMessage());
         }
